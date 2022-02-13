@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import {Landing} from './Components/index'
+import { ThemeProvider } from 'styled-components'
+import {theme} from './Styles/Theme'
+import {GlobalStyle} from './Styles/Global'
 
 function App() {
   return (
-    <>
-      onboarding
-    </>
+      <ThemeProvider theme={theme}>
+        <Landing/>
+        <GlobalStyle/>
+      </ThemeProvider>
   );
 }
 
